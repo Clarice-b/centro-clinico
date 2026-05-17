@@ -1,6 +1,7 @@
 @extends('main')
 
 @section('titulo', 'Lista de Clientes')
+
 @section('conteudo')
 <h1>Clientes</h1>
 @if(session()->has('mensagem'))
