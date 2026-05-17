@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Profissional;
+use App\Models\Especialidade;
 
-class Especialidade extends Model
+class Profissional extends Model
 {
-   public function profissionais()
+    public function especialidades()
     {
         return $this->belongsToMany(
-            Profissional::class,
+            Especialidade::class,
             'especialidade_profissional'
         )->withPivot('valor_consulta')
          ->withTimestamps();
-    } 
+    }
 }
